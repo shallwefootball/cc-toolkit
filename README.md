@@ -1,6 +1,6 @@
-# Claude Code Plugins
+# Amos's Claude Code Plugins
 
-Useful Claude Code plugins collection by wecouldbe.
+Useful Claude Code plugins collection.
 
 ## Available Plugins
 
@@ -9,11 +9,21 @@ Useful Claude Code plugins collection by wecouldbe.
 GitHub 레포지토리를 클론하고 구조를 분석하여 마크다운 문서로 정리합니다.
 
 **Features:**
-- GitHub 레포지토리 자동 클론 (`~/Documents/clone/` 디렉토리에)
+- 두 가지 실행 모드:
+  - URL 제공: GitHub 레포지토리 자동 클론 (`~/Documents/clone/` 디렉토리에)
+  - URL 없이 실행: 현재 디렉토리가 git 레포면 바로 분석
 - 레포지토리 메타데이터 수집 (Stars, Forks, 라이선스, 마지막 커밋 등)
 - 프로젝트 구조 및 기술 스택 분석
 - 핵심 컴포넌트와 아키텍처 분석
-- `REPO-ANALYSIS.md` 파일 자동 생성
+- `REPO-ANALYSIS.md` 파일 자동 생성 (한국어/영어 혼용)
+
+### open-intellij
+
+현재 디렉토리를 IntelliJ IDEA CE에서 엽니다.
+
+**Features:**
+- 현재 작업 디렉토리를 IntelliJ IDEA CE로 바로 열기
+- 간단한 원라이너 커맨드
 
 ## Installation
 
@@ -21,33 +31,37 @@ GitHub 레포지토리를 클론하고 구조를 분석하여 마크다운 문�
 
 ```bash
 # Add the marketplace
-/plugin marketplace add wecouldbe/claude-code-plugins
+/plugin marketplace add shallwefootball/amos-cc-plugins
 
-# Install the plugin you need
-/plugin install analyze-repo
+# Install the plugins you need
+/plugin install analyze-repo@amos-cc-plugins
+/plugin install open-intellij@amos-cc-plugins
 ```
 
 ### Option 2: Manual Installation
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/wecouldbe/claude-code-plugins.git
-cd claude-code-plugins
+git clone https://github.com/shallwefootball/amos-cc-plugins.git
+cd amos-cc-plugins
 ```
 
 2. Copy the plugin to your Claude Code commands directory:
 ```bash
 # For global installation (available in all projects)
 cp -r analyze-repo/commands/* ~/.claude/commands/
+cp -r open-intellij/commands/* ~/.claude/commands/
 
 # For project-specific installation
 cp -r analyze-repo/commands/* /path/to/your/project/.claude/commands/
+cp -r open-intellij/commands/* /path/to/your/project/.claude/commands/
 ```
 
 ## Usage
 
 ### analyze-repo
 
+**Mode 1: Analyze remote repository**
 ```bash
 /analyze-repo https://github.com/owner/repo-name
 ```
@@ -57,36 +71,55 @@ The command will:
 2. Analyze the codebase structure
 3. Generate `REPO-ANALYSIS.md` in the repository root
 
-Example output structure:
-```markdown
-# [Repository Name] Analysis
+**Mode 2: Analyze current directory**
+```bash
+/analyze-repo
+```
 
-## Repository Information
+The command will:
+1. Check if current directory is a git repository
+2. Analyze the codebase structure
+3. Generate `REPO-ANALYSIS.md` in the current directory
+
+**Example output structure:**
+```markdown
+# [Repository Name] 분석
+
+## 레포지토리 정보
 - **GitHub URL**: ...
 - **Stars**: ⭐ ...
 - **Last Commit**: 📅 ...
 
-## Overview
-[Project description]
+## 개요
+[프로젝트 설명]
 
-## Tech Stack
-[Languages, frameworks, libraries]
+## 기술 스택
+[언어, 프레임워크, 라이브러리]
 
-## Project Structure
-[Directory structure]
+## 프로젝트 구조
+[디렉토리 구조]
 
-## Core Components
-[Key files and modules]
+## 핵심 컴포넌트
+[주요 파일과 모듈]
 
-## Architecture
-[Design patterns and data flow]
+## 아키텍처
+[아키텍처 패턴, 데이터 흐름]
 ```
+
+### open-intellij
+
+```bash
+/intellij
+```
+
+Opens the current directory in IntelliJ IDEA CE.
 
 ## Requirements
 
 - [Claude Code](https://code.claude.com/) CLI installed
-- GitHub CLI (`gh`) for repository metadata (optional)
 - Git for cloning repositories
+- GitHub CLI (`gh`) for repository metadata (optional, for analyze-repo)
+- IntelliJ IDEA CE (for open-intellij)
 
 ## Contributing
 
