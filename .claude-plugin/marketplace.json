@@ -27,6 +27,17 @@
       },
       "source": "./open-intellij",
       "keywords": ["intellij", "ide", "editor", "open", "agent"]
+    },
+    {
+      "name": "plugin-manager",
+      "description": "amos-cc-plugins 마켓플레이스를 업데이트합니다. 자연어 또는 /update 명령어로 사용 가능",
+      "version": "1.0.0",
+      "author": {
+        "name": "Dongkeon Kim",
+        "email": "amos@shallwefootball.com"
+      },
+      "source": "./plugin-manager",
+      "keywords": ["plugin", "marketplace", "update", "agent"]
     }
   ]
 }
