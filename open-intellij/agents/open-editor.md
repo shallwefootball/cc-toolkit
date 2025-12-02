@@ -1,5 +1,5 @@
 ---
-description: 사용자의 에디터(IntelliJ IDEA CE)를 열어줍니다. "에디터 열어줘", "IntelliJ 열어줘", "IDE 열어줘" 같은 요청에 자동으로 사용됩니다.
+description: 사용자의 에디터(IntelliJ IDEA CE)를 열어줍니다. 사용자가 "에디터 열어", "IntelliJ 열어", "IDE 열어", "개발 환경 열어" 등을 요청하면 PROACTIVELY 이 에이전트를 사용하세요.
 ---
 
 # Open Editor Agent

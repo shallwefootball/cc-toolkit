@@ -1,6 +1,6 @@
 {
   "name": "open-intellij",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "에디터(IntelliJ IDEA CE)를 열어줍니다. 자연어 또는 /intellij 명령어로 사용 가능",
   "author": {
     "name": "Dongkeon Kim",

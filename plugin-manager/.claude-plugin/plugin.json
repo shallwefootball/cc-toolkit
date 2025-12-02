@@ -1,6 +1,6 @@
 {
   "name": "plugin-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "amos-cc-plugins 마켓플레이스를 업데이트합니다. 자연어 또는 /update 명령어로 사용 가능",
   "author": {
     "name": "Dongkeon Kim",

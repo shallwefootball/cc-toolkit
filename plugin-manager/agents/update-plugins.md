@@ -1,5 +1,5 @@
 ---
-description: amos-cc-plugins 마켓플레이스를 업데이트합니다. "플러그인 업데이트해줘", "마켓플레이스 업데이트해줘" 같은 요청에 자동으로 사용됩니다.
+description: amos-cc-plugins 마켓플레이스를 업데이트합니다. 사용자가 "플러그인 업데이트", "마켓플레이스 업데이트", "플러그인 최신화" 등을 요청하면 PROACTIVELY 이 에이전트를 사용하세요.
 ---
 
 # Update Plugins Agent
