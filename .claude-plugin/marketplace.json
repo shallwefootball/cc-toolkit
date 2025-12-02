@@ -1,12 +1,18 @@
 {
   "name": "wecouldbe-plugins",
   "description": "Useful Claude Code plugins collection",
+  "owner": {
+    "name": "shallwefootball",
+    "email": "amos@shallwefootball.com"
+  },
   "plugins": [
     {
       "name": "analyze-repo",
       "description": "GitHub 레포지토리를 클론하고 구조를 분석하여 마크다운 문서로 정리합니다",
       "version": "1.0.0",
-      "source": "./analyze-repo"
+      "author": "shallwefootball",
+      "source": "./analyze-repo",
+      "keywords": ["github", "analysis", "documentation", "repository"]
     }
   ]
 }
