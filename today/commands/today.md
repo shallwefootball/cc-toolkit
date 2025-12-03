@@ -21,9 +21,14 @@ description: 오늘 하루 Claude Code로 뭘 했는지 활동 요약을 보여�
 
 3. **히스토리에서 오늘 프롬프트 수 집계**
    ```bash
+   # 오늘 자정 timestamp prefix 계산 (밀리초 기준 앞 5자리)
+   TODAY_PREFIX=$(date -d "today 00:00:00" +%s | cut -c1-5)
+
    # 오늘 timestamp prefix로 필터링
-   grep -a '"timestamp":17646' ~/.claude/history.jsonl | jq -r '.project | split("/") | .[-1]' 2>/dev/null | sort | uniq -c | sort -rn
+   grep -a "\"timestamp\":${TODAY_PREFIX}" ~/.claude/history.jsonl | jq -r '.project | split("/") | .[-1]' 2>/dev/null | sort | uniq -c | sort -rn
    ```
+
+   **중요**: timestamp prefix는 매일 바뀌므로 반드시 동적으로 계산해야 함
 
 4. **결과를 세션 기반 마크다운으로 출력**
 
