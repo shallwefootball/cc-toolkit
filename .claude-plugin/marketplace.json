@@ -42,7 +42,7 @@
     {
       "name": "capture",
       "description": "클로드 코드 대화 내용을 옵시디언 볼트에 캡처합니다",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Dongkeon Kim",
         "email": "amos@shallwefootball.com"
