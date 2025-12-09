@@ -1,5 +1,6 @@
 ---
 description: 오늘 하루 Claude Code로 뭘 했는지 활동 요약을 보여줍니다
+allowed-tools: Bash(find:*), Bash(grep:*), Bash(jq:*), Bash(date:*), Bash(ls:*), AskUserQuestion
 ---
 
 Claude Code로 무엇을 했는지 **세션별로** 분석해서 보여줘.
