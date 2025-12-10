@@ -1,5 +1,5 @@
 {
-  "name": "cc-toolkit",
+  "name": "tools",
   "version": "1.0.0",
   "description": "Claude Code 유틸리티 모음. /today, /yesterday, /capture, /intellij, /update 명령어 포함",
   "author": {
