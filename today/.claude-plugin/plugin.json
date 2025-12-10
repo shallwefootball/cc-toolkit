@@ -1,0 +1,13 @@
+{
+  "name": "today",
+  "version": "2.0.0",
+  "description": "오늘/어제 하루 Claude Code로 뭘 했는지 활동 요약을 보여줍니다",
+  "author": {
+    "name": "Dongkeon Kim",
+    "email": "amos@shallwefootball.com"
+  },
+  "commands": [
+    "./commands/today.md",
+    "./commands/yesterday.md"
+  ]
+}
